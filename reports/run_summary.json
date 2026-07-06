@@ -1,0 +1,375 @@
+{
+  "tickers": [
+    "AAPL",
+    "MSFT",
+    "TSLA",
+    "JPM",
+    "XOM"
+  ],
+  "price_history": {
+    "AAPL": {
+      "n_days": 1255,
+      "start": "2021-07-02",
+      "end": "2026-07-02"
+    },
+    "MSFT": {
+      "n_days": 1255,
+      "start": "2021-07-02",
+      "end": "2026-07-02"
+    },
+    "TSLA": {
+      "n_days": 1255,
+      "start": "2021-07-02",
+      "end": "2026-07-02"
+    },
+    "JPM": {
+      "n_days": 1255,
+      "start": "2021-07-02",
+      "end": "2026-07-02"
+    },
+    "XOM": {
+      "n_days": 1255,
+      "start": "2021-07-02",
+      "end": "2026-07-02"
+    }
+  },
+  "classifier": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "majority_baseline_accuracy": 0.3333333333333333,
+    "n_train": 1125,
+    "n_test": 375,
+    "confusion_labels": [
+      "negative",
+      "neutral",
+      "positive"
+    ],
+    "confusion_matrix": [
+      [
+        125,
+        0,
+        0
+      ],
+      [
+        0,
+        125,
+        0
+      ],
+      [
+        0,
+        0,
+        125
+      ]
+    ]
+  },
+  "n_headlines": 4351,
+  "lag_regression_pooled": [
+    {
+      "scorer": "classifier",
+      "horizon": 1,
+      "mean_coef": -0.00034817483573640833,
+      "mean_tstat": -0.16675115016412176,
+      "n_tickers": 5
+    },
+    {
+      "scorer": "classifier",
+      "horizon": 2,
+      "mean_coef": -5.37983495129618e-05,
+      "mean_tstat": 0.109578400119096,
+      "n_tickers": 5
+    },
+    {
+      "scorer": "classifier",
+      "horizon": 3,
+      "mean_coef": 0.00045664430105294616,
+      "mean_tstat": 0.27343827895430634,
+      "n_tickers": 5
+    },
+    {
+      "scorer": "classifier",
+      "horizon": 4,
+      "mean_coef": 0.0002797268337736053,
+      "mean_tstat": 0.10076924671449265,
+      "n_tickers": 5
+    },
+    {
+      "scorer": "classifier",
+      "horizon": 5,
+      "mean_coef": -0.00019342128954371197,
+      "mean_tstat": 0.030814907251445634,
+      "n_tickers": 5
+    },
+    {
+      "scorer": "lexicon",
+      "horizon": 1,
+      "mean_coef": -0.0002615982492622186,
+      "mean_tstat": -0.047941879703057654,
+      "n_tickers": 5
+    },
+    {
+      "scorer": "lexicon",
+      "horizon": 2,
+      "mean_coef": 6.182537628558709e-05,
+      "mean_tstat": 0.26621165115962975,
+      "n_tickers": 5
+    },
+    {
+      "scorer": "lexicon",
+      "horizon": 3,
+      "mean_coef": 0.0004031544497636208,
+      "mean_tstat": 0.37319226815913725,
+      "n_tickers": 5
+    },
+    {
+      "scorer": "lexicon",
+      "horizon": 4,
+      "mean_coef": 0.000436735734754393,
+      "mean_tstat": 0.2767961665511246,
+      "n_tickers": 5
+    },
+    {
+      "scorer": "lexicon",
+      "horizon": 5,
+      "mean_coef": 0.00014538508599276664,
+      "mean_tstat": 0.219224208207396,
+      "n_tickers": 5
+    }
+  ],
+  "volatility_regression": [
+    {
+      "ticker": "AAPL",
+      "scorer": "lexicon",
+      "n_obs": 732,
+      "coef_abs_sentiment": 0.0007199023113508475,
+      "tstat_abs_sentiment": 0.9655271490790064,
+      "pvalue_abs_sentiment": 0.33428084450352136,
+      "coef_dispersion": 0.0005773851172478906,
+      "tstat_dispersion": 0.611533988245706,
+      "pvalue_dispersion": 0.5408461243901618,
+      "r_squared": 0.001272169729091277
+    },
+    {
+      "ticker": "AAPL",
+      "scorer": "classifier",
+      "n_obs": 732,
+      "coef_abs_sentiment": 0.001557775466206287,
+      "tstat_abs_sentiment": 1.780065317609341,
+      "pvalue_abs_sentiment": 0.0750652717290205,
+      "coef_dispersion": 0.0009659030304833396,
+      "tstat_dispersion": 0.9476064092558311,
+      "pvalue_dispersion": 0.3433298621103096,
+      "r_squared": 0.003582186777111196
+    },
+    {
+      "ticker": "MSFT",
+      "scorer": "lexicon",
+      "n_obs": 702,
+      "coef_abs_sentiment": -0.00016751074263884045,
+      "tstat_abs_sentiment": -0.20628687511188096,
+      "pvalue_abs_sentiment": 0.8365668302015036,
+      "coef_dispersion": -0.0004518822571461824,
+      "tstat_dispersion": -0.41871877224270315,
+      "pvalue_dispersion": 0.6754216746651176,
+      "r_squared": 0.0002552919319758207
+    },
+    {
+      "ticker": "MSFT",
+      "scorer": "classifier",
+      "n_obs": 702,
+      "coef_abs_sentiment": -0.0005023877802561698,
+      "tstat_abs_sentiment": -0.45683104320203183,
+      "pvalue_abs_sentiment": 0.647792491026848,
+      "coef_dispersion": -0.00041803076064386225,
+      "tstat_dispersion": -0.3352099472893459,
+      "pvalue_dispersion": 0.7374667188460731,
+      "r_squared": 0.00040678044849440376
+    },
+    {
+      "ticker": "TSLA",
+      "scorer": "lexicon",
+      "n_obs": 739,
+      "coef_abs_sentiment": -0.002508549504353164,
+      "tstat_abs_sentiment": -1.5998994599785064,
+      "pvalue_abs_sentiment": 0.10962088915933316,
+      "coef_dispersion": -0.0044192490102695665,
+      "tstat_dispersion": -2.575521848618151,
+      "pvalue_dispersion": 0.01000889496016515,
+      "r_squared": 0.008454857330138066
+    },
+    {
+      "ticker": "TSLA",
+      "scorer": "classifier",
+      "n_obs": 739,
+      "coef_abs_sentiment": -0.0012393843983379556,
+      "tstat_abs_sentiment": -0.769211914614256,
+      "pvalue_abs_sentiment": 0.4417675184900385,
+      "coef_dispersion": -0.004614376389414403,
+      "tstat_dispersion": -2.5360958393037083,
+      "pvalue_dispersion": 0.011209605145835326,
+      "r_squared": 0.007051771555967368
+    },
+    {
+      "ticker": "JPM",
+      "scorer": "lexicon",
+      "n_obs": 701,
+      "coef_abs_sentiment": 0.0005289428737381296,
+      "tstat_abs_sentiment": 0.7319549628667673,
+      "pvalue_abs_sentiment": 0.46419605717331713,
+      "coef_dispersion": 0.0003992626457552573,
+      "tstat_dispersion": 0.3659353919717285,
+      "pvalue_dispersion": 0.7144132862794657,
+      "r_squared": 0.0007737534225573661
+    },
+    {
+      "ticker": "JPM",
+      "scorer": "classifier",
+      "n_obs": 701,
+      "coef_abs_sentiment": -0.0006349341785226719,
+      "tstat_abs_sentiment": -0.6843725344497861,
+      "pvalue_abs_sentiment": 0.4937399548537409,
+      "coef_dispersion": -0.00015156171607265542,
+      "tstat_dispersion": -0.12859459757458136,
+      "pvalue_dispersion": 0.8976784413253693,
+      "r_squared": 0.000745551984841164
+    },
+    {
+      "ticker": "XOM",
+      "scorer": "lexicon",
+      "n_obs": 709,
+      "coef_abs_sentiment": -6.586273338085504e-06,
+      "tstat_abs_sentiment": -0.009958227515280851,
+      "pvalue_abs_sentiment": 0.9920546153318724,
+      "coef_dispersion": -0.0001999762621167681,
+      "tstat_dispersion": -0.250367381926205,
+      "pvalue_dispersion": 0.8023032519321361,
+      "r_squared": 8.829686141020865e-05
+    },
+    {
+      "ticker": "XOM",
+      "scorer": "classifier",
+      "n_obs": 709,
+      "coef_abs_sentiment": 0.0011024388976726962,
+      "tstat_abs_sentiment": 1.5362003552460883,
+      "pvalue_abs_sentiment": 0.12448924892391718,
+      "coef_dispersion": 0.00033937289999752367,
+      "tstat_dispersion": 0.422605046132385,
+      "pvalue_dispersion": 0.6725834443254999,
+      "r_squared": 0.0026109871070226776
+    }
+  ],
+  "event_study_pooled": [
+    {
+      "rel_day": -5,
+      "aar": 0.00038062755792131887,
+      "n_events": 2361.0,
+      "car": 0.00038062755792131887
+    },
+    {
+      "rel_day": -4,
+      "aar": 6.094656126963779e-05,
+      "n_events": 2363.0,
+      "car": 0.00044157411919095666
+    },
+    {
+      "rel_day": -3,
+      "aar": -0.00012661703452359195,
+      "n_events": 2365.0,
+      "car": 0.00031495708466736474
+    },
+    {
+      "rel_day": -2,
+      "aar": 0.000313476433429461,
+      "n_events": 2368.0,
+      "car": 0.0006284335180968257
+    },
+    {
+      "rel_day": -1,
+      "aar": 3.1954291578991963e-06,
+      "n_events": 2370.0,
+      "car": 0.0006316289472547249
+    },
+    {
+      "rel_day": 0,
+      "aar": 0.0005514388649702928,
+      "n_events": 2373.0,
+      "car": 0.0011830678122250176
+    },
+    {
+      "rel_day": 1,
+      "aar": 0.0002772890990152577,
+      "n_events": 2373.0,
+      "car": 0.0014603569112402754
+    },
+    {
+      "rel_day": 2,
+      "aar": -3.440813288941206e-05,
+      "n_events": 2372.0,
+      "car": 0.0014259487783508634
+    },
+    {
+      "rel_day": 3,
+      "aar": 3.0864510403917564e-05,
+      "n_events": 2369.0,
+      "car": 0.0014568132887547809
+    },
+    {
+      "rel_day": 4,
+      "aar": -4.876292595898841e-06,
+      "n_events": 2368.0,
+      "car": 0.001451936996158882
+    },
+    {
+      "rel_day": 5,
+      "aar": -1.3512143143371524e-05,
+      "n_events": 2365.0,
+      "car": 0.0014384248530155104
+    }
+  ],
+  "backtest": [
+    {
+      "ticker": "AAPL",
+      "strategy_total_return": -0.5804108707295992,
+      "strategy_sharpe": -0.7560584307158819,
+      "strategy_max_dd": -0.6300686803447442,
+      "buy_hold_total_return": 1.2051300371534723,
+      "buy_hold_sharpe": 0.6197771819854041,
+      "buy_hold_max_dd": -0.33433711682495604
+    },
+    {
+      "ticker": "MSFT",
+      "strategy_total_return": -0.3307427140905289,
+      "strategy_sharpe": -0.3617083695453047,
+      "strategy_max_dd": -0.5389478334127871,
+      "buy_hold_total_return": 0.4064109490365564,
+      "buy_hold_sharpe": 0.2626422409322019,
+      "buy_hold_max_dd": -0.3755646877094806
+    },
+    {
+      "ticker": "TSLA",
+      "strategy_total_return": 0.34401814540275044,
+      "strategy_sharpe": 0.1352083705900895,
+      "strategy_max_dd": -0.6876267471314688,
+      "buy_hold_total_return": 0.7386212991604082,
+      "buy_hold_sharpe": 0.19849659103586034,
+      "buy_hold_max_dd": -0.7363221699148719
+    },
+    {
+      "ticker": "JPM",
+      "strategy_total_return": 1.0180933586684118,
+      "strategy_sharpe": 0.8021952408139205,
+      "strategy_max_dd": -0.18097292850419155,
+      "buy_hold_total_return": 1.1436262257258267,
+      "buy_hold_sharpe": 0.6741156637437478,
+      "buy_hold_max_dd": -0.40645011060658964
+    },
+    {
+      "ticker": "XOM",
+      "strategy_total_return": 0.6060021775226727,
+      "strategy_sharpe": 0.47747505095392606,
+      "strategy_max_dd": -0.3069148290801984,
+      "buy_hold_total_return": 1.170175716321039,
+      "buy_hold_sharpe": 0.6292112057387529,
+      "buy_hold_max_dd": -0.20650842713010997
+    }
+  ]
+}
