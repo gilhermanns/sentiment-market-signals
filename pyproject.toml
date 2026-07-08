@@ -9,6 +9,7 @@ description = "NLP pipeline scoring financial headlines for sentiment and testin
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
+authors = [{ name = "Gil Hermanns" }]
 dependencies = [
     "pandas>=2.0",
     "numpy>=1.24",
