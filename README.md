@@ -97,3 +97,7 @@ Diese Ergebnisse, obwohl sie keine positive prädiktive Kraft des Sentiments zei
 ## Lizenz & Haftungsausschluss
 
 Dieses Projekt ist unter der MIT-Lizenz lizenziert. Es dient Bildungs- und Forschungszwecken im Bereich Quantitative Finance. Die vorgestellten Modelle und Ergebnisse dienen nur zur Veranschaulichung und stellen keine Finanzberatung dar oder garantieren eine reale Performance. Bei der Handhabung von Finanzinstrumenten ist stets professionelles Urteilsvermögen und eine gründliche Due Diligence erforderlich.
+
+---
+
+*Entwickelt mit Unterstützung von Claude Code (Anthropic).*
