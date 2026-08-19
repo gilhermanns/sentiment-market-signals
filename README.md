@@ -52,7 +52,20 @@ Die Analyse, durchgeführt über 5 Jahre realer täglicher Preisdaten (2021-07-0
 
 Diese Ergebnisse, obwohl sie keine positive prädiktive Kraft des Sentiments zeigen, sind für Finanzprofis äußerst wertvoll. Sie demonstrieren die Fähigkeit, eine komplexe quantitative Analyse durchzuführen, die Ergebnisse kritisch zu interpretieren und die Grenzen von Modellen zu verstehen – Fähigkeiten, die im Private Banking und Wealth Management unerlässlich sind.
 
-*(Beispiel-Charts und Tabellen, die die Klassifikator-Leistung, Lag-Regressionen, Event-Study-CARs und Backtest-Equity-Kurven zeigen, würden hier eingebettet.)*
+### Reproduzierbarer Pipeline-Run
+
+Der versionierte Lauf umfasst fünf Ticker, 1.255 Handelstage je Instrument und 4.351 synthetische Schlagzeilen. Die Klassifikationsgenauigkeit von 100% gilt nur für die kontrollierten synthetischen Trainings- und Testdaten und ist **kein** Nachweis für Leistung auf echten Finanznachrichten.
+
+| Prüfung | Ergebnis aus dem versionierten Run | Einordnung |
+|---|---:|---|
+| Gepoolte 1-Tages-Lag-Regression, Klassifikator | t-Statistik -0.17 | Keine belastbare Evidenz für Vorhersagekraft |
+| Gepoolte 3-Tages-Lag-Regression, Lexikon | t-Statistik 0.37 | Ebenfalls weit von üblicher statistischer Signifikanz entfernt |
+| AAPL Sentiment-Strategie | -58.04% Gesamtrendite | Gegenüber +120.51% Buy-and-Hold im selben Run deutlich schwächer |
+| JPM Sentiment-Strategie | +101.81% Gesamtrendite | Positiv, aber unter +114.36% Buy-and-Hold im selben Run |
+
+Die vollständigen Ergebnisse sind direkt einsehbar: [`reports/run_summary.json`](reports/run_summary.json) dokumentiert Datenfenster und Kernmetriken; [`reports/lag_regressions_pooled.csv`](reports/lag_regressions_pooled.csv), [`reports/volatility_regressions.csv`](reports/volatility_regressions.csv) und [`reports/event_study_pooled.csv`](reports/event_study_pooled.csv) enthalten die statistischen Tests. Der kostenbereinigte Vergleich ist in [`reports/backtest_results.csv`](reports/backtest_results.csv) verfügbar; [`reports/dashboard_AAPL.html`](reports/dashboard_AAPL.html) stellt einen prüfbaren Beispiel-Dashboard-Output bereit.
+
+Das negative Ergebnis ist bewusst erhalten: Da die Schlagzeilen als Placebo-Daten konstruiert wurden, soll die Pipeline fehlende Prognosekraft offenlegen statt künstlich Alpha zu erzeugen.
 
 ## Projektstruktur
 
